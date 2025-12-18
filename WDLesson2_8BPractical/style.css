@@ -1,2 +1,21 @@
 /* Challenge 2: Use w3SchoolsMockUp.png to help you write the necessary CSS rules.
    Hint: Remember all the fundamental CSS rules when working with flexboxes */
+   #sidebar{
+      flex-direction: column;
+      flex: 1;
+   }
+
+   #main, #angle{
+      justify-content: center;
+      align-items: center;
+      flex: 3;
+   }
+   
+   #footer{
+      background-color: green;
+   }
+
+   #footer p{
+      flex: 1;
+      text-align: center;
+   }
