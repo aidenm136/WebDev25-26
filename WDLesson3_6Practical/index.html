@@ -7,6 +7,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script>
 
+
     </script>
   </head>
   <body>
@@ -23,7 +24,15 @@
     </div>
     <div class="solutions">
       <!-- Challenge 1: UI for Average program. Note: User will enter three grades as three separate inputs. -->
+       <h2>Enter Three Grades</h2>
+<input type="number" id="grade1" placeholder="Grade 1">
+<input type="number" id="grade2" placeholder="Grade 2">
+<input type="number" id="grade3" placeholder="Grade 3">
+<br><br>
+<button onclick="calculateAverage()">Calculate Average</button>
+<p id="averageResult"></p>
       <!-- Challenge 2 is in script.js -->
+
 
     </div>
     <div class="container subbanner">
@@ -31,11 +40,21 @@
         <h3> Slope </h3>
         <p>Calculate and display the slope of a line based on two points, (x<sub>1</sub>,y<sub>1</sub>) and (x<sub>2</sub>,y<sub>2</sub>) provided by the user.</p>
 
+
         <a class="links"href="https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-slope/a/slope-formula">Resource</a>
       </div>
     </div>
     <div class="solutions">
       <!-- Challenge 3: UI for Slope program.  Note: User will enter values for x1, y1, x2 and y2 as four separate inputs. -->
+       <h2>Enter Two Points</h42>
+<input type="number" id="x1" placeholder="x₁">
+<input type="number" id="y1" placeholder="y₁">
+<br><br>
+<input type="number" id="x2" placeholder="x₂">
+<input type="number" id="y2" placeholder="y₂">
+<br><br>
+<button onclick="calculateSlope()">Calculate Slope</button>
+<p id="slopeResult"></p>
       <!-- Challenge 4 is in script.js -->
     </div>
     <div class="container subbanner">
@@ -47,10 +66,16 @@
     </div>
     <div class="solutions last">
       <!-- Challenge 5: UI for BMI program. Note: User will enter their height and weight as two separate inputs. -->
+        <h2>Enter Height and Weight</h2>
+<input type="number" id="height" placeholder="Height (meters)">
+<input type="number" id="weight" placeholder="Weight (kg)">
+<br><br>
+<button onclick="calculateBMI()">Calculate BMI</button>
+<p id="bmiResult"></p>
       <!-- Challenge 6 is in script.js -->
     </div>
     <div id="footer" class="container center">
       <h3>WD Lesson 3.6 Practical</h3>
-    </div> 
+    </div>
   </body>
 </html>
