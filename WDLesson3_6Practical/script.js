@@ -27,8 +27,8 @@ function calculateSlope() {
 }
 // Challenge 6:  Create the function for the BMI program.  Refer to the resource link in the HTML for assistance.
 function calculateBMI() {
-  let height = Number(document.getElementById("height").value); // meters
-  let weight = Number(document.getElementById("weight").value); // kg
+  let height = Number(document.getElementById("height").value); 
+  let weight = Number(document.getElementById("weight").value);
 
 
   let bmi = weight / (height * height);
