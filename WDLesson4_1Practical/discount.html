@@ -13,11 +13,18 @@
         let output = document.getElementById("output");
         let message = ""
         // Challenge 1: Create a variable total that is the sum of all three prices.
-
+        let total = price1 + price2 + price3;
         // Challenge 2: If the total is more than 100, set message to "Discount earned" otherwise set message to "Not enough for discount"
 
+        if (total > 100){
+          message = "Discount earned";
+        } 
+        else {
+          message = "Not enough for discount";
+        }
         // Challenge 3: Display a message including the total and discount message
-      }
+        output.innerHTML = "Total: $" + total.toFixed(2) + "<br>" + message;
+        
     </script>
   </head>
   <body>
@@ -39,11 +46,12 @@
     </div>
     <div class="container">
       <div class="card">
-        <input type="text" id="price1" placeholder="Enter Price 1">
-        <input type="text" id="price2" placeholder="Enter Price 2">
-        <input type="text" id="price3" placeholder="Enter Price 3">
-        <input type="button" onclick="discount()" value="Purchase">
-        <div id="output"></div>        
+        <h3> Enter three prices </h3>
+        <input type="text" id="price1" placeholder="Enter price 1">
+        <input type="text" id="price2" placeholder="Enter price 2">
+        <input type="text" id="price3" placeholder="Enter price 3">
+        <input type="button" onclick="discount()" value="Calculate Discount">
+        <div id="output"></div>    
       </div>
     </div>
 
