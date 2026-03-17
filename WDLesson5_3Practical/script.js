@@ -11,8 +11,30 @@
 */
 
 function balance(){
+        let P = parseFloat(document.getElementById("p").value);
+        let R = parseFloat(document.getElementById("r").value);
+        let N = parseFloat(document.getElementById("n").value);
+        let T = parseFloat(document.getElementById("n").value);
+        let output=document.getElementById("output");
+        let build="";
+        if(N == 1){
+                build+=`<table><tr><th>year></th><th>Interest Compound Yearly</th></tr>`;
+        }else if (N == 2){
+                build+=`<table><tr><th>year></th><th>Interest Compound Bi-yearly</th></tr>`;  
+        }else if (N == 4){
+                build+=`<table><tr><th>year></th><th>Interest Compound Quarterly</th></tr>`;
+        }else if (N == 12){
+                build+=`<table><tr><th>year></th><th>Interest Compound Monthly</th></tr>`;
+        }else {
+                build+=`<table><tr><th>year></th><th>Interest Compound </th></tr>`;
+        }
+        for (let x=1; x<=T; x+=1){
+                let y=P*Math.pow (1+(R/N), N*x);
+                build+=`<tr><td>${x}</td><td>$${y.toFixed(2)}</td></tr>`;
+        }
 
-
+        build+=`</table>`;
+        output.innerHTML=build
 }
 
 /* Challenge Bonus: Allow the user to enter n.  This will require you to modify,
@@ -21,6 +43,6 @@ function balance(){
         3) Adjust the heading reflect the compound length.  Below are some typical lengths
               a. n = 1 then the interest is compounded yearly
               b. n = 12 then the interest is compounded monthly
-              c. n = 3 then the interest is compounded quarterly
+              c. n = 4 then the interest is compounded quarterly
               d. n = 2 then the interest is compounded bi-yearly
 */ 
