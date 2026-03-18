@@ -14,19 +14,19 @@ function balance(){
         let P = parseFloat(document.getElementById("p").value);
         let R = parseFloat(document.getElementById("r").value);
         let N = parseFloat(document.getElementById("n").value);
-        let T = parseFloat(document.getElementById("n").value);
+        let T = parseFloat(document.getElementById("t").value);
         let output=document.getElementById("output");
         let build="";
         if(N == 1){
-                build+=`<table><tr><th>year></th><th>Interest Compound Yearly</th></tr>`;
+                build+=`<table><tr><th>Year</th><th>Interest Compound Yearly</th></tr>`;
         }else if (N == 2){
-                build+=`<table><tr><th>year></th><th>Interest Compound Bi-yearly</th></tr>`;  
+                build+=`<table><tr><th>Year</th><th>Interest Compound Bi-yearly</th></tr>`;  
         }else if (N == 4){
-                build+=`<table><tr><th>year></th><th>Interest Compound Quarterly</th></tr>`;
+                build+=`<table><tr><th>Year</th><th>Interest Compound Quarterly</th></tr>`;
         }else if (N == 12){
-                build+=`<table><tr><th>year></th><th>Interest Compound Monthly</th></tr>`;
+                build+=`<table><tr><th>Year</th><th>Interest Compound Monthly</th></tr>`;
         }else {
-                build+=`<table><tr><th>year></th><th>Interest Compound </th></tr>`;
+                build+=`<table><tr><th>Year</th><th>Interest Compound </th></tr>`;
         }
         for (let x=1; x<=T; x+=1){
                 let y=P*Math.pow (1+(R/N), N*x);
